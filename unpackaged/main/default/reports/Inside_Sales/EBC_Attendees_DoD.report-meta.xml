@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>EBC_Attendees__c$Opportunity__c.CloseDate</field>
+    </columns>
+    <columns>
+        <field>EBC_Attendees__c$Contact_Name__c</field>
+    </columns>
+    <columns>
+        <field>EBC_Attendees__c$Contact_Name__c.Title</field>
+    </columns>
+    <columns>
+        <field>EBC_Attendees__c$Contact_Name__c.Email</field>
+    </columns>
+    <description>EBC Attendees - DoD</description>
+    <filter>
+        <criteriaItems>
+            <column>EBC_Attendees__c$Opportunity__c.Account.Industry</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Government</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EBC_Attendees__c$Company_Federal_Segment__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>DoD</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>EBC_Attendees__c$Opportunity__c.Account</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>EBC Attendees - DoD</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>EBC_Attendees__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>EBC_Attendees__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

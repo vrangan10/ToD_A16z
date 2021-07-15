@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Event__c$Name</field>
+    </columns>
+    <columns>
+        <field>Event__c.Event_attendees__r$Account__c</field>
+    </columns>
+    <columns>
+        <field>Event__c.Event_attendees__r$Contact__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Event__c$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>peer 150</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Event__c$Name</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>NY</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Peer 150 Report for Dalton</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Events_with_Attendees__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Event__c$CreatedDate</dateColumn>
+        <endDate>2015-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-04-01</startDate>
+    </timeFrameFilter>
+</Report>

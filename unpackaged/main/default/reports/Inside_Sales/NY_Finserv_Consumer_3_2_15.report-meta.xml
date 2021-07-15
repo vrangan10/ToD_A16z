@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>EBC_Attendees__c$Opportunity__c.Type</field>
+    </columns>
+    <columns>
+        <field>EBC_Attendees__c$Company_Name__c</field>
+    </columns>
+    <columns>
+        <field>EBC_Attendees__c$Contact_Name__c</field>
+    </columns>
+    <columns>
+        <field>EBC_Attendees__c$Contact_Name__c.Title</field>
+    </columns>
+    <columns>
+        <field>EBC_Attendees__c$Contact_Name__c.Email</field>
+    </columns>
+    <columns>
+        <field>EBC_Attendees__c$Opportunity__c.CloseDate</field>
+    </columns>
+    <description>Financial Services Week</description>
+    <filter>
+        <criteriaItems>
+            <column>EBC_Attendees__c$Opportunity__c.Account.Industry</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Financial Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EBC_Attendees__c$Attendee_type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Corporate</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EBC_Attendees__c$Opportunity__c.StageName</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>4. Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EBC_Attendees__c$Contact_Name__c.MailingState</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>nj,ny,new jersey,new york</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EBC_Attendees__c$Contact_Name__c.Title</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>CISO,Security,architect,engineer,infrastructure,storage,CIO,information technology,analyst,consultant</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EBC_Attendees__c$Contact_Name__c.Title</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>CIO,Chief Information Officer,VP IT,Director,Analyst,Consultant,manager</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>NY Finserv Consumer Attendees 3.2.15</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>EBC_Attendees__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>EBC_Attendees__c$Contact_Name__c.Email</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>EBC_Attendees__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$People_Status__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Technical_Screen__c</field>
+    </columns>
+    <columns>
+        <field>Contact$Grad_Year__c</field>
+    </columns>
+    <columns>
+        <field>Contact$University__c</field>
+    </columns>
+    <description>Matching Technical Rank to Status</description>
+    <format>Tabular</format>
+    <name>SF Cleanup (Nigel)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>People__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Contact$Technical_Screen__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Contact$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

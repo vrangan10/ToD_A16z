@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.In_Stealth_Mode__c</field>
+    </columns>
+    <columns>
+        <field>Account.Can_Portfolio_Be_Mentioned__c</field>
+    </columns>
+    <columns>
+        <field>Account.Board_Member_1__c</field>
+    </columns>
+    <columns>
+        <field>Account.Portfolio_Status__c</field>
+    </columns>
+    <columns>
+        <field>Account.Primary_Sector__c</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.Investment</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Investment_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Exit,Dead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Portfolio_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Seed - Mango,V/G - Board Seat,V/G - No Board Seat</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Tech_Talenet__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>ProTalent POC (run by JZ)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Account.Board_Member_1__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

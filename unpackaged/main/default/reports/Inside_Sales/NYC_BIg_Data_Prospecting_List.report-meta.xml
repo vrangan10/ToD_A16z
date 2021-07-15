@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Company_Status__c</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>TITLE</field>
+    </columns>
+    <columns>
+        <field>ADDRESS2_STATE</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>Account.Fortune_1000_Rank__c</field>
+    </columns>
+    <columns>
+        <field>Account.Global_2000_Rank__c</field>
+    </columns>
+    <columns>
+        <field>Account.Internet_Retailer_500_Rank__c</field>
+    </columns>
+    <columns>
+        <field>Account.ALPC_Rank__c</field>
+    </columns>
+    <description>NYC BIg Data Prospecting List</description>
+    <filter>
+        <booleanFilter>((1 AND ((2 AND 3) OR 4)) AND 5) AND 6</booleanFilter>
+        <criteriaItems>
+            <column>ADDRESS2_STATE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>NY,New York,NYC,New Jersey,NJ</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>TITLE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>C,SVP,CIO,CI,CTO,Chief,Vice,VP,Director,Managing Director,Head of,Manager</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>TITLE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Architecture,Analytics,Information,Data,Big data,Technology</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>TITLE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>CIO,CTO,Chief Information Officer,Chief Technology Officer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT_RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>01280000000Fryh,Account.Investment</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT.NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>UNKNOWN - Do Not Delete or Rename</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>NYC BIg Data Prospecting List</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

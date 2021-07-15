@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Investment_Type__c</field>
+    </columns>
+    <columns>
+        <field>Account.Portfolio_Status__c</field>
+    </columns>
+    <columns>
+        <field>Account.Deal_Sheet_Description__c</field>
+    </columns>
+    <columns>
+        <field>Account.Tech_Talent_Company_Overview__c</field>
+    </columns>
+    <columns>
+        <field>Account.Founder_s_Story__c</field>
+    </columns>
+    <columns>
+        <field>Account.Comments__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Account.Investment</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Investment_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>,Exit,Dead,Ycombinator,Seed Fund</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Portfolio_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Seed,Seed - Legacy,Seed - Graduated,Exit - IPO,Exit - M&amp;A,Dead</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>TT - Company Description | Talent Portal</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

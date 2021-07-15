@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Formal_Introduction__c.Primary_Contact__c</field>
+    </columns>
+    <columns>
+        <field>Formal_Introduction__c.Company_Introduced_To__c</field>
+    </columns>
+    <columns>
+        <field>Formal_Introduction__c.Declined_Offer_Reason__c</field>
+    </columns>
+    <columns>
+        <field>Formal_Introduction__c.Declined_Offer_Detail__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Formal_Introduction__c.Introduction_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed - Accepted Another Offer in Portfolio,Closed - Candidate Declined Offer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Formal_Introduction__c.Primary_Company__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>University Student,High School Student</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Formal_Introduction__c.Talent_Acquisition</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Pro Declines by Reason and Detail</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Formal_Introduction__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Formal_Introduction__c.Outcome_Date__c</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

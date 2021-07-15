@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Formal_Introduction__c.Primary_Contact__c</field>
+    </columns>
+    <columns>
+        <field>Formal_Introduction__c.Primary_Company__c</field>
+    </columns>
+    <columns>
+        <field>Formal_Introduction__c.Introduction_Status__c</field>
+    </columns>
+    <columns>
+        <field>Formal_Introduction__c.Date_Introduction_Made__c</field>
+    </columns>
+    <columns>
+        <field>Formal_Introduction__c.Primary_Contact_Potential_Role__c</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <description>Jan. 1, 2013 - Dec. 31, 2013</description>
+    <filter>
+        <criteriaItems>
+            <column>Formal_Introduction__c.Introduction_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,Closed - Hired,Closed - Hired (Non Portfolio)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_OWNER_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Ellen Lai Tunoa,Jennifer Zimmerer,Lynn Rudolph,Jessica Hansen</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>College Hires - 2013</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Formal_Introduction__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Formal_Introduction__c.Introduction_Status__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Formal_Introduction__c.Date_Introduction_Made__c</dateColumn>
+        <endDate>2013-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2013-01-01</startDate>
+    </timeFrameFilter>
+</Report>

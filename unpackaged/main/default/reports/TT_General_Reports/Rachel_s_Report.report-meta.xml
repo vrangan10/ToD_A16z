@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunity_Contact_Role_Count__c</field>
+    </columns>
+    <columns>
+        <field>Contact.People_Status__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Potential_Role__c</field>
+    </columns>
+    <columns>
+        <field>Contact.University__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Other_University_Name__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Grad_Year__c</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>CONTACT_OWNER</field>
+    </columns>
+    <filter>
+        <booleanFilter>1 and 2</booleanFilter>
+        <criteriaItems>
+            <column>Contact.Secondary_Contact_Tags__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>College Talent</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.University__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Brown,Cal Poly,Caltech,CCA,CMU,Columbia,Cornell,Duke,Georgia Tech,Harvard,Harvey Mudd,High School,MIT,NC State,NYU ITP,Other,Parsons,Penn State,Pomona College,RISD,RIT,SJSU,Stanford,UC Berkeley,UCLA,UC San Diego,UIUC,Univ. of Michigan,Univ. of Pennsylvania,Univ. of Washington,Univ. of Waterloo,USC,UT Austin</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.Secondary_Contact_Tags__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Rachel&apos;s Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>ACCOUNT.NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2016-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2009-01-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_RECORDTYPE</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CUST_RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Counsel__c.Executive_Talent_Candidate</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>ET Exec Counsels - 2013</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Counsel__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Counsel__c.Date_Service_Was_Provided__c</dateColumn>
+        <endDate>2013-05-01</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2012-06-01</startDate>
+    </timeFrameFilter>
+</Report>

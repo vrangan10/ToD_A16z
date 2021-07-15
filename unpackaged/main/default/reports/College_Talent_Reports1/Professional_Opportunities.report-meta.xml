@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <description>Change to correct owner and close out</description>
+    <filter>
+        <criteriaItems>
+            <column>FULL_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jessica Hansen</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed - Hired,Closed - Hired (Outplacement),Closed - Not Selected For Submittal,Candidate Intro&apos;d &amp; Declined,Closed - Candidate Declined,Closed - Sourcer Declined,Closed - Recruiter Declined,Closed - Hiring Manager Declined,Closed - No AH Interest,Closed - No Portfolio Interest,Closed - Follow Up,Closed - Declined Submittal,Closed - Handed Off to Executive Talent,Closed - Advising/Consulting,Closed - Candidate Withdrew,Closed - Handed Off to Deal Team</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Professional Opportunities</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>CLOSE_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <endDate>2012-01-19</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2009-01-01</startDate>
+    </timeFrameFilter>
+</Report>

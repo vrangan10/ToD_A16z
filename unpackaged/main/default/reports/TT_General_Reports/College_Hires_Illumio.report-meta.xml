@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Formal_Introduction__c.Primary_Contact__c</field>
+    </columns>
+    <columns>
+        <field>Formal_Introduction__c.Potential_Role__c</field>
+    </columns>
+    <columns>
+        <field>Formal_Introduction__c.Company_Introduced_To__c</field>
+    </columns>
+    <columns>
+        <field>Formal_Introduction__c.Introduction_Status__c</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>Formal_Introduction__c.Date_Introduction_Made__c</field>
+    </columns>
+    <columns>
+        <field>Formal_Introduction__c.Outcome_Date__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>Formal_Introduction__c.Introduction_Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed - Hired,Closed - Hired (Intern Conversion)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Formal_Introduction__c.Company_Introduced_To__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Illumio</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>College Hires - Illumio</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Formal_Introduction__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Formal_Introduction__c.Date_Introduction_Made__c</dateColumn>
+        <endDate>2015-05-14</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2014-09-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>EBC_Attendees__c$Name</field>
+    </columns>
+    <columns>
+        <field>EBC_Attendees__c$Contact_Name__c</field>
+    </columns>
+    <columns>
+        <field>EBC_Attendees__c$Company__c</field>
+    </columns>
+    <columns>
+        <field>EBC_Attendees__c$Contact_Name__c.Title</field>
+    </columns>
+    <columns>
+        <field>EBC_Attendees__c$Opportunity__c</field>
+    </columns>
+    <columns>
+        <field>EBC_Attendees__c$Opportunity__c.CloseDate</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>EBC_Attendees__c$Attendee_type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Corporate</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EBC_Attendees__c$Opportunity__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Lockheed,Booz Allen,Raytheon,SAIC,CACI,BAE,Northrop,Deloitte,Accenture,General Dynamics,CIA,DISA,Airforce,Army,Marine,navy,DIA,FBI,NSA,National Security Agency,Central Intelligence Agency,Defense Information,Federal Bureau of Investigation,Department of Defence</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>EBC Attendees - Federal</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>EBC_Attendees__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>EBC_Attendees__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

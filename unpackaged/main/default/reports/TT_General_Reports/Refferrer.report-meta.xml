@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Referral__c$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Referral__c$Name</field>
+    </columns>
+    <columns>
+        <field>Referral__c$Referral_Source__c</field>
+    </columns>
+    <columns>
+        <field>Referral__c$Referrered_Person__c</field>
+    </columns>
+    <description>Referral Source - Top number of referrals</description>
+    <filter>
+        <criteriaItems>
+            <column>Referral__c$CreatedBy</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Shannon Schiltz,Eric Thomas,Robert Moreno,Marilyn Martin,Jennifer Zimmerer,Ellen Lai Tunoa,Jessica Hansen,Lynn Rudolph,Anna Soliveres,Dave Jagoda,Tina Ferguson,Alyssa Del Bene</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>MASTER | Referrals // Given</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Referrals__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>Referral__c$Referral_Source__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Referral__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Submittal__c.Primary_Contact__c</field>
+    </columns>
+    <columns>
+        <field>Submittal__c.Submittal_Outcome__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CUST_RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Submittal__c.Talent_Acquisition</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Submittal__c.Primary_Company__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>University Student</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_OWNER_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Amanda Mulay,Emily Graff,Kristina Graci-deluna,Shannon Schiltz,Eric Thomas,Marilyn Martin,Robert Moreno,Jennifer Zimmerer,Dave Jagoda,Jessica Hansen,Deal Tracker</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Pro | Submittals (Qtr)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Submittal__c@Submittal__c.Company_Submitted_To__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CURRENTQ</interval>
+    </timeFrameFilter>
+</Report>

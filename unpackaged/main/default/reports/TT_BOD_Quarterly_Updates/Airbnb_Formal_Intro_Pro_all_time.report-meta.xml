@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Formal_Introduction__c.Potential_Role__c</field>
+    </columns>
+    <columns>
+        <field>Formal_Introduction__c.Primary_Contact__c</field>
+    </columns>
+    <columns>
+        <field>Formal_Introduction__c.Introduction_Status__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>FK_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>okta</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Formal_Introduction__c.Primary_Company__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>University Student</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_RECORDTYPE</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Formal_Introduction__c.Talent_Acquisition</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CUST_OWNER_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Shannon Schiltz,Eric Thomas,Marilyn Martin,Robert Moreno,Jennifer Zimmerer,Dave Jagoda,Jessica Hansen,Deal Tracker</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Pro - Formal Intro (ALL)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Formal_Introduction__c@Formal_Introduction__c.Company_Introduced_To__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>CUST_OWNER_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Formal_Introduction__c.Date_Introduction_Made__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

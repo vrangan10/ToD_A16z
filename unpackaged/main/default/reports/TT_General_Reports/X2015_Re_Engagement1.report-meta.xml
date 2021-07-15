@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>Contact.Potential_Role__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Re_engagement_Status__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Opportunity_Contact_Role_Count__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>CONTACT_OWNER</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>kristina graci-deluna,amanda mulay,emily graff,robert moreno,eric thomas,marilyn martin</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Last_Activity__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>1/1/2015</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Primary_Contact_Tags__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>excludes</operator>
+            <value>Portfolio Employee</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Primary_Contact_Tags__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Technical Talent</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CONTACT_OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>2015 Re-Engagement</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2014-01-01</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2009-01-01</startDate>
+    </timeFrameFilter>
+</Report>
